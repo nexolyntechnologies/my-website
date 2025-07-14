@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexolyn</title>
+    <link rel="icon" type="image/x-icon" href="image.jpg" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+
+    <style>
+        body {
+            background-color: #0b0508;
+            color: white;
+            margin: 0;
+            padding-top: 100px;
+        }
+
+        .navbar {
+            background-color: #0b0508 !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #d06416 !important;
+        }
+
+        .btn-outline-light:hover {
+            background-color: transparent;
+            color: #d06416;
+            border-color: #d06416;
+        }
+
+        .dropdown-menu {
+            background-color: #212529;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .dropdown-item {
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: #343a40;
+            color: #d06416;
+            transform: translateX(4px);
+        }
+
+        .hero-section {
+            background: url('webbanner.png') no-repeat center center;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero-buttons .btn {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 6px;
+        }
+
+        .btn-dark {
+            background-color: #111;
+            border: none;
+        }
+
+        .btn-blue {
+            background-color: #27364d;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+        }
+
+        .btn-blue:hover {
+            background-color: #1c283a;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .accordion .card {
+            background-color: #121212;
+            border: none;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .accordion .card-header {
+            background-color: #1e1e1e;
+        }
+
+        .card-header h5 button {
+            color: white;
+            text-align: left;
+            width: 100%;
+            font-size: 1.2rem;
+        }
+
+        .card-header h5 button:hover {
+            color: #d06416;
+            text-decoration: none;
+        }
+
+        img {
+            background-color: #27364d;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+                padding: 0 20px;
+            }
+
+            .hero-buttons .btn {
+                width: 90%;
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .card-header h5 button {
+                font-size: 1rem;
+            }
+
+            .navbar-collapse {
+                background-color: #0b0508;
+                padding: 1rem;
+            }
+        }
+  .brand-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d06416;
+  }
+    </style>
+</head>
+
+<body>
+
+    <header style="position: fixed; top: 0; width: 100%; z-index: 1050;">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="image.png" alt="SwiftOrbit Logo" style="max-height: 60px; margin-right: 10px;" />
+                    <span class="brand-name">Nexolyn</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto text-center">
+                        <li class="nav-item active"><a class="nav-link h5 text-white" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link h5 text-white" href="about.html">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle h5 text-white" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown">Services</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="web-development.html">Web Development</a>
+                                <a class="dropdown-item" href="billing-software.html">Billing Software</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="machine-learning.html">Machine Learning</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link h5 text-white" href="#contact">Contact</a></li>
+                    </ul>
+
+                    <form class="form-inline mt-2 mt-lg-0 ml-lg-3 text-center" id="navbarSearchForm">
+                        <input class="form-control form-control-sm mr-2" type="search" placeholder="Search features..."
+                            id="navbarSearchInput" />
+                        <button class="btn btn-outline-light btn-sm" type="submit">Search</button>
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-title">Empower Your Vision with <span style="color: #d06416;">Nexolyn</span></div>
+        <div class="hero-buttons">
+            <a href="services.html" class="btn btn-dark">Services</a>
+            <a href="#" class="btn btn-blue">Our Process</a>
+        </div>
+    </section>
+
+   
+    <section class="container my-5">
+        <div class="section-title">Who are we?</div>
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 text-center">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LXbGHl-UMew" allowfullscreen></iframe>
+            </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="accordion" id="aboutAccordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><button class="btn btn-link text-left" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true">End-to-end product design</button></h5>
+                        </div>
+                        <div id="collapseOne" class="collapse show" data-parent="#aboutAccordion">
+                            <div class="card-body">
+                                We support the full product lifecycle—from idea to deployment...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><button class="btn btn-link collapsed text-left" data-toggle="collapse"
+                                    data-target="#collapseTwo">
+                                    Software development services</button></h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" data-parent="#aboutAccordion">
+                            <div class="card-body">
+                                We deliver scalable, secure, and high-performing software solutions...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><button class="btn btn-link collapsed text-left" data-toggle="collapse"
+                                    data-target="#collapseThree">
+                                    Software testing</button></h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-parent="#aboutAccordion">
+                            <div class="card-body">
+                                Ensure flawless performance and security with our QA and testing...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="container my-5">
+    <div class="section-title">Nexolyn Features</div>
+    <div class="row text-center">
+        <div class="col-md-4 mb-4 feature-item" data-title="custom development">
+            <img src="development.png" alt="Code Icon" width="60">
+            <h5 class="mt-3">Custom Development</h5>
+            <p>Tailor-made solutions using modern technologies.</p>
+        </div>
+        <div class="col-md-4 mb-4 feature-item" data-title="cloud integration">
+            <img src="cloud.png" alt="Cloud Icon" width="60">
+            <h5 class="mt-3">Cloud Integration</h5>
+            <p>Seamlessly integrate cloud services.</p>
+        </div>
+        <div class="col-md-4 mb-4 feature-item" data-title="ai automation">
+            <img src="ai.png" alt="AI Icon" width="60">
+            <h5 class="mt-3">AI & Automation</h5>
+            <p>Boost productivity with intelligent process design.</p>
+        </div>
+        <div class="col-md-4 mb-4 feature-item" data-title="security first">
+            <img src="security.png" alt="Security Icon" width="60">
+            <h5 class="mt-3">Security First</h5>
+            <p>Protected with industry-grade security practices.</p>
+        </div>
+        <div class="col-md-4 mb-4 feature-item" data-title="agile collaboration">
+            <img src="agile.png" alt="Team Icon" width="60">
+            <h5 class="mt-3">Agile Collaboration</h5>
+            <p>Agile communication ensures better results.</p>
+        </div>
+        <div class="col-md-4 mb-4 feature-item" data-title="client centric focus">
+            <img src="clinent.png" alt="Customer Icon" width="60">
+            <h5 class="mt-3">Client-Centric Focus</h5>
+            <p>We shape every project with your success in mind.</p>
+        </div>
+    </div>
+</section>
+
+
+    <section class="container my-5" id="contact">
+        <div class="section-title">Contact Us</div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 bg-dark p-5 rounded text-white">
+                <h2 class="mb-4">Get in touch</h2>
+                <p class="mb-4">We'd love to hear from you!</p>
+            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                <input type="hidden" name="access_key" value="2ef315a6-03b8-473d-995d-df2544afe701">
+            
+                <div class="form-group">
+                    <label for="fullName">Full name*</label>
+                    <input type="text" class="form-control" id="fullName" name="name" placeholder="Your Name" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+            
+                
+                <div class="form-group">
+                    <label for="mobileNumber">Mobile Number*</label>
+                    <input type="tel" class="form-control" id="mobileNumber" name="mobile" placeholder="+91 99999 99999" required
+                        pattern="[\d\s+()-]{7,}">
+                </div>
+            
+                <div class="form-group">
+                    <label for="department">Select Department (Optional)</label>
+                    <select class="form-control" id="department" name="department">
+                        <option selected disabled>Choose...</option>
+                        <option>Sales</option>
+                        <option>Support</option>
+                        <option>Development</option>
+                    </select>
+                </div>
+            
+                <div class="form-group">
+                    <label for="message">Message*</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Write your message here..."
+                        required></textarea>
+                </div>
+            
+                <button type="submit" class="btn btn-blue mt-3">Submit</button>
+            
+                <div id="formMessage" class="alert alert-success mt-3" style="display: none;">
+                    Thank you! We’ll be in touch soon.
+                </div>
+            </form>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: #0b0508;" class="text-white mt-5 pt-4 pb-3">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="brand-name">Nexolyn</h5>
+                    <p>Empowering digital transformation with software & automation.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-uppercase mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="about.html" class="text-white">About</a></li>
+                        <li><a href="services.html" class="text-white">Services</a></li>
+                        <li><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-uppercase mb-3">Contact</h5>
+                    <p>Email: <a href="mailto:nexolyntechnologies@gmail.com" class="text-white">nexolyntechnologies@gmail.com</a></p>
+                    <p>Phone: 9961706029</p>
+                    <p>Location: Kollam, Kerala, India</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3 border-top border-secondary">
+            &copy; 2025 Nexolyn. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+  <script>
+  document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: data
+    });
+
+    if (response.ok) {
+      form.reset();
+      document.getElementById('formMessage').style.display = 'block';
+    } else {
+      alert('There was a problem submitting your form. Please try again later.');
+    }
+  });
+</script>
+<script>
+    document.getElementById('navbarSearchForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const searchQuery = document.getElementById('navbarSearchInput').value.toLowerCase().trim();
+        const features = document.querySelectorAll('.feature-item');
+
+        let matches = 0;
+        features.forEach(item => {
+            const title = item.getAttribute('data-title');
+            if (title.includes(searchQuery)) {
+                item.style.display = 'block';
+                matches++;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        if (searchQuery === '') {
+            features.forEach(item => item.style.display = 'block');
+        } else if (matches === 0) {
+            alert(`No features found for "${searchQuery}"`);
+        }
+    });
+</script>
+
+
+</body>
+
+</html>
