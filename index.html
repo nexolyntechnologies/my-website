@@ -1,469 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Design & Development | Nexolyn</title>
-    <meta name="description" content="Nexolyn offers modern web design, development, and digital solutions to grow your business online.">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexolyn Technologies | Top Software Company in Kollam</title>
+    <meta name="description" content="Nexolyn Technologies is a leading Software Company in Kollam offering Web Development, GST Billing Software, and Custom ERP Solutions in Kerala.">
+    <meta property="og:title" content="Nexolyn Technologies | Software Company Kollam">
+    <meta property="og:description" content="Top Web Development and Billing Software Company in Kollam, Kerala.">
+    <meta property="og:url" content="https://www.nexolyn.work/index.html">
+    <meta property="og:type" content="website">
+    
     <link rel="icon" type="image/x-icon" href="image.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
     <meta name="google-site-verification" content="TQRXjh7_Ilv9WfuYm_B9wXiYpzkcpJkODCTzI_8VIcE" />
-
-    <style>
-        body {
-            background-color: #0b0508;
-            color: white;
-            margin: 0;
-            padding-top: 100px;
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Nexolyn Technologies",
+          "url": "https://www.nexolyn.work",
+          "logo": "https://www.nexolyn.work/logo.png",
+          "sameAs": [
+            "https://github.com/nexolyntechnologies",
+            "https://www.youtube.com/@nexolyn3575"
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "Nexolyn Technologies",
+          "image": "https://www.nexolyn.work/logo.png",
+          "url": "https://www.nexolyn.work",
+          "email": "nexolyntechnologies@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kollam",
+            "addressRegion": "Kerala",
+            "addressCountry": "IN"
+          },
+          "description": "Leading Software Company in Kollam providing robust IT and software development services.",
+          "areaServed": "Kollam, Kerala, India",
+          "priceRange": "$$"
         }
-
-        .navbar {
-            background-color: #0b0508 !important;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #d06416 !important;
-        }
-
-        .btn-outline-light:hover {
-            background-color: transparent;
-            color: #d06416;
-            border-color: #d06416;
-        }
-
-        .dropdown-menu {
-            background-color: #212529;
-            border: none;
-            border-radius: 10px;
-            padding: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        }
-
-        .dropdown-item {
-            color: #ffffff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .dropdown-item:hover {
-            background-color: #343a40;
-            color: #d06416;
-            transform: translateX(4px);
-        }
-
-        .hero-section {
-            background: url('webbanner.png') no-repeat center center;
-            background-size: cover;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .hero-title {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .hero-buttons .btn {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-radius: 6px;
-        }
-
-        .btn-dark {
-            background-color: #111;
-            border: none;
-        }
-
-        .btn-blue {
-            background-color: #27364d;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
-        }
-
-        .btn-blue:hover {
-            background-color: #1c283a;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: white;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .accordion .card {
-            background-color: #121212;
-            border: none;
-            color: white;
-            margin-bottom: 10px;
-        }
-
-        .accordion .card-header {
-            background-color: #1e1e1e;
-        }
-
-        .card-header h5 button {
-            color: white;
-            text-align: left;
-            width: 100%;
-            font-size: 1.2rem;
-        }
-
-        .card-header h5 button:hover {
-            color: #d06416;
-            text-decoration: none;
-        }
-
-        img {
-            background-color: #27364d;
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2rem;
-                padding: 0 20px;
-            }
-
-            .hero-buttons .btn {
-                width: 90%;
-                font-size: 1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .card-header h5 button {
-                font-size: 1rem;
-            }
-
-            .navbar-collapse {
-                background-color: #0b0508;
-                padding: 1rem;
-            }
-        }
-  .brand-name {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #d06416;
-  }
-    </style>
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Nexolyn",
-    "url": "https://www.nexolyn.work",
-    "logo": "https://www.nexolyn.work/logo.png",
-    "sameAs": [
-      "https://github.com/nexolyntechnologies",
-      "https://www.youtube.com/@nexolyn3575"
-    ]
-  }
-  </script>
-
+      ]
+    }
+    </script>
 </head>
-
 <body>
 
-    <header style="position: fixed; top: 0; width: 100%; z-index: 1050;">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="logo.png" alt="Nexolyn Logo" style="max-height: 60px; margin-right: 10px;" />
-                    <span class="brand-name">Nexolyn</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto text-center">
-                        <li class="nav-item active"><a class="nav-link h5 text-white" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link h5 text-white" href="about.html">About</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle h5 text-white" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown">Services</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="web-development.html">Web Development</a>
-                                <a class="dropdown-item" href="billing-software.html">Billing Software</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="machine-learning.html">Machine Learning</a>
-                            </div>
-                        </li>
-                        <li class="nav-item"><a class="nav-link h5 text-white" href="#contact">Contact</a></li>
-                    </ul>
-
-                    <form class="form-inline mt-2 mt-lg-0 ml-lg-3 text-center" id="navbarSearchForm">
-                        <input class="form-control form-control-sm mr-2" type="search" placeholder="Search features..."
-                            id="navbarSearchInput" />
-                        <button class="btn btn-outline-light btn-sm" type="submit">Search</button>
-                    </form>
-
-                </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo.png" alt="Nexolyn Logo" style="height: 40px; margin-right: 10px;">
+                <span class="brand-name text-white fs-4">Nexolyn</span>
+            </a>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="web-development.html">Web Development</a></li>
+                            <li><a class="dropdown-item" href="billing-software.html">Billing Software</a></li>
+                            <li><hr class="dropdown-divider bg-secondary"></li>
+                            <li><a class="dropdown-item" href="machine-learning.html">Machine Learning</a></li>
+                            <li><a class="dropdown-item" href="#services">All Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
             </div>
-        </nav>
-    </header>
-
-    <section class="hero-section">
-        <div class="hero-title">Empower Your Vision with <span style="color: #d06416;">Nexolyn</span></div>
-        <div class="hero-buttons">
-            <a href="services.html" class="btn btn-dark">Services</a>
-            <a href="#" class="btn btn-blue">Our Process</a>
         </div>
-    </section>
+    </nav>
 
-   
-    <section class="container my-5">
-        <div class="section-title">Who are we?</div>
-        <div class="row align-items-center">
-            <div class="col-md-6 mb-4 text-center">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LXbGHl-UMew" allowfullscreen></iframe>
-            </div>
-
-            </div>
-            <div class="col-md-6">
-                <div class="accordion" id="aboutAccordion">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5><button class="btn btn-link text-left" data-toggle="collapse" data-target="#collapseOne"
-                                    aria-expanded="true">End-to-end product design</button></h5>
-                        </div>
-                        <div id="collapseOne" class="collapse show" data-parent="#aboutAccordion">
-                            <div class="card-body">
-                                We support the full product lifecycle—from idea to deployment...
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h5><button class="btn btn-link collapsed text-left" data-toggle="collapse"
-                                    data-target="#collapseTwo">
-                                    Software development services</button></h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" data-parent="#aboutAccordion">
-                            <div class="card-body">
-                                We deliver scalable, secure, and high-performing software solutions...
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h5><button class="btn btn-link collapsed text-left" data-toggle="collapse"
-                                    data-target="#collapseThree">
-                                    Software testing</button></h5>
-                        </div>
-                        <div id="collapseThree" class="collapse" data-parent="#aboutAccordion">
-                            <div class="card-body">
-                                Ensure flawless performance and security with our QA and testing...
-                            </div>
-                        </div>
+    <!-- Hero Section -->
+    <section class="hero-section text-center" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-image"></div>
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1 class="display-3 fw-bold mb-4 text-white" data-aos="fade-up" data-aos-duration="1000">
+                        Transforming Businesses Through <br> <span class="text-gradient">Innovative Software Solutions</span>
+                    </h1>
+                    <p class="lead text-muted mb-5" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                        We deliver scalable, secure, and high-performing digital products for modern enterprises.
+                    </p>
+                    <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                        <a href="#contact" class="btn btn-primary me-3 mb-3">Get a Free Consultation</a>
+                        <a href="#services" class="btn btn-outline mb-3">View Our Services</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-<section class="container my-5">
-    <div class="section-title">Nexolyn Features</div>
-    <div class="row text-center">
-        <div class="col-md-4 mb-4 feature-item" data-title="custom development">
-            <img src="development.png" alt="Code Icon" width="60">
-            <h5 class="mt-3">Custom Development</h5>
-            <p>Tailor-made solutions using modern technologies.</p>
+    <!-- About Section -->
+    <section class="section-padding" id="about">
+        <div class="container">
+            <h2 class="section-title text-gradient" data-aos="fade-up">Who Are We?</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">End-to-end product design and software development tailored to your goals.</p>
+            
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg" style="border: 1px solid var(--glass-border);">
+                        <iframe src="https://www.youtube.com/embed/LXbGHl-UMew" title="YouTube video" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="accordion glass-panel" id="aboutAccordion">
+                        <div class="accordion-item bg-transparent border-0 border-bottom border-secondary">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                                    End-to-end product design
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#aboutAccordion">
+                                <div class="accordion-body text-muted">
+                                    We support the full product lifecycle—from idea to deployment. Our UI/UX designers create intuitive experiences while our developers build scalable architectures.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent border-0 border-bottom border-secondary">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Software development services
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+                                <div class="accordion-body text-muted">
+                                    We deliver scalable, secure, and high-performing software solutions tailored specifically to meet your unique business requirements.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent border-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    Quality & Testing
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+                                <div class="accordion-body text-muted">
+                                    Ensure flawless performance and security with our QA and testing. We implement rigorous automated and manual testing protocols.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="mt-5 pt-5">
+                <h3 class="text-center mb-5 text-white" data-aos="fade-up">Our Journey & Process</h3>
+                <div class="timeline">
+                    <div class="timeline-container left" data-aos="fade-right">
+                        <div class="glass-panel p-4">
+                            <h4 class="text-gradient">1. Discovery & Planning</h4>
+                            <p class="text-muted mb-0">We understand your business goals, identify challenges, and create a comprehensive technical roadmap.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container right" data-aos="fade-left">
+                        <div class="glass-panel p-4">
+                            <h4 class="text-gradient">2. UI/UX Design</h4>
+                            <p class="text-muted mb-0">Crafting stunning, user-centric interfaces with modern design principles like glassmorphism and intuitive flows.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container left" data-aos="fade-right">
+                        <div class="glass-panel p-4">
+                            <h4 class="text-gradient">3. Agile Development</h4>
+                            <p class="text-muted mb-0">Building robust frontend and backend architectures using state-of-the-art frameworks and cloud infrastructure.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container right" data-aos="fade-left">
+                        <div class="glass-panel p-4">
+                            <h4 class="text-gradient">4. Deployment & Support</h4>
+                            <p class="text-muted mb-0">Seamlessly launching your product to production and providing ongoing maintenance and scaling support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 mb-4 feature-item" data-title="cloud integration">
-            <img src="cloud.png" alt="Cloud Icon" width="60">
-            <h5 class="mt-3">Cloud Integration</h5>
-            <p>Seamlessly integrate cloud services.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-padding bg-black" id="services">
+        <div class="container">
+            <h2 class="section-title text-gradient" data-aos="fade-up">Our Expertise</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Comprehensive tech solutions to propel your enterprise forward.</p>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h4 class="text-white mb-3">Web Development</h4>
+                        <p class="text-muted">Custom full-stack web applications built with modern frameworks for optimal speed and scalability.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <h4 class="text-white mb-3">Billing Software</h4>
+                        <p class="text-muted">Automated, secure, and compliant invoicing and billing systems for streamline financial ops.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-sitemap"></i></div>
+                        <h4 class="text-white mb-3">ERP Solutions</h4>
+                        <p class="text-muted">Integrated enterprise resource planning tools to manage all aspects of your business efficiently.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4 class="text-white mb-3">Mobile App Dev</h4>
+                        <p class="text-muted">Native and cross-platform mobile applications for iOS and Android with premium user experiences.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-cloud"></i></div>
+                        <h4 class="text-white mb-3">Cloud Solutions</h4>
+                        <p class="text-muted">AWS and Azure cloud integrations, serverless architectures, and secure data migrations.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                        <h4 class="text-white mb-3">AI Integration</h4>
+                        <p class="text-muted">Machine learning models, intelligent automation, and AI chatbots to supercharge your workflows.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 mb-4 feature-item" data-title="ai automation">
-            <img src="ai.png" alt="AI Icon" width="60">
-            <h5 class="mt-3">AI & Automation</h5>
-            <p>Boost productivity with intelligent process design.</p>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title text-gradient" data-aos="fade-up">Technologies We Use</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">We leverage the best tools in the industry to build premium software.</p>
+            
+            <div class="d-flex flex-wrap justify-content-center mt-5" data-aos="fade-up" data-aos-delay="200">
+                <div class="tech-logo"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
+                <div class="tech-logo"><i class="fab fa-python"></i><span>Python</span></div>
+                <div class="tech-logo"><i class="fas fa-leaf"></i><span>Django</span></div>
+                <div class="tech-logo"><i class="fas fa-flask"></i><span>Flask</span></div>
+                <div class="tech-logo"><i class="fab fa-react"></i><span>React</span></div>
+                <div class="tech-logo"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                <div class="tech-logo"><i class="fas fa-database"></i><span>MySQL</span></div>
+                <div class="tech-logo"><i class="fas fa-server"></i><span>PostgreSQL</span></div>
+                <div class="tech-logo"><i class="fab fa-docker"></i><span>Docker</span></div>
+                <div class="tech-logo"><i class="fab fa-aws"></i><span>AWS</span></div>
+                <div class="tech-logo"><i class="fab fa-github"></i><span>GitHub</span></div>
+            </div>
         </div>
-        <div class="col-md-4 mb-4 feature-item" data-title="security first">
-            <img src="security.png" alt="Security Icon" width="60">
-            <h5 class="mt-3">Security First</h5>
-            <p>Protected with industry-grade security practices.</p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section-padding bg-black" id="portfolio">
+        <div class="container">
+            <h2 class="section-title text-gradient" data-aos="fade-up">Featured Projects</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">A glimpse into some of the innovative solutions we've built.</p>
+            
+            <div class="row mt-5">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-item glass-panel p-2">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project 1" class="rounded">
+                        <div class="portfolio-overlay rounded">
+                            <h4 class="text-white">FinTech Dashboard</h4>
+                            <p class="text-secondary">React, Node.js, PostgreSQL</p>
+                            <button class="btn btn-sm btn-outline-light rounded-pill mt-2" data-bs-toggle="modal" data-bs-target="#projectModal1">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-item glass-panel p-2">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project 2" class="rounded">
+                        <div class="portfolio-overlay rounded">
+                            <h4 class="text-white">AI Data Analyzer</h4>
+                            <p class="text-secondary">Python, Django, AWS</p>
+                            <button class="btn btn-sm btn-outline-light rounded-pill mt-2" data-bs-toggle="modal" data-bs-target="#projectModal1">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-item glass-panel p-2">
+                        <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project 3" class="rounded">
+                        <div class="portfolio-overlay rounded">
+                            <h4 class="text-white">E-Commerce Platform</h4>
+                            <p class="text-secondary">Bootstrap 5, JS, MySQL</p>
+                            <button class="btn btn-sm btn-outline-light rounded-pill mt-2" data-bs-toggle="modal" data-bs-target="#projectModal1">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 mb-4 feature-item" data-title="agile collaboration">
-            <img src="agile.png" alt="Team Icon" width="60">
-            <h5 class="mt-3">Agile Collaboration</h5>
-            <p>Agile communication ensures better results.</p>
-        </div>
-        <div class="col-md-4 mb-4 feature-item" data-title="client centric focus">
-            <img src="clinent.png" alt="Customer Icon" width="60">
-            <h5 class="mt-3">Client-Centric Focus</h5>
-            <p>We shape every project with your success in mind.</p>
+    </section>
+
+    <!-- Modals for Portfolio -->
+    <div class="modal fade" id="projectModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark border-secondary text-white">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title">Project Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="img-fluid rounded mb-3" alt="Project preview">
+                    <h4>FinTech Dashboard</h4>
+                    <p class="text-muted">A comprehensive financial dashboard built for scale. Features real-time data visualization, secure transaction processing, and a modern glassmorphism UI.</p>
+                    <div class="mt-3">
+                        <span class="badge bg-primary">React</span>
+                        <span class="badge bg-secondary">Node.js</span>
+                        <span class="badge bg-dark border">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</section>
 
-
-    <section class="container my-5" id="contact">
-        <div class="section-title">Contact Us</div>
-        <div class="row justify-content-center">
-            <div class="col-lg-8 bg-dark p-5 rounded text-white">
-                <h2 class="mb-4">Get in touch</h2>
-                <p class="mb-4">We'd love to hear from you!</p>
-            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-                <input type="hidden" name="access_key" value="2ef315a6-03b8-473d-995d-df2544afe701">
-            
-                <div class="form-group">
-                    <label for="fullName">Full name*</label>
-                    <input type="text" class="form-control" id="fullName" name="name" placeholder="Your Name" required>
+    <!-- Statistics Section -->
+    <section class="section-padding" style="background: var(--bg-dark);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-item glass-panel">
+                        <div class="stat-number counter" data-target="150">0</div>
+                        <div class="text-muted text-uppercase fw-bold">Projects Completed</div>
+                    </div>
                 </div>
-            
-                <div class="form-group">
-                    <label for="email">Email*</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item glass-panel">
+                        <div class="stat-number counter" data-target="85">0</div>
+                        <div class="text-muted text-uppercase fw-bold">Clients Served</div>
+                    </div>
                 </div>
-            
-                
-                <div class="form-group">
-                    <label for="mobileNumber">Mobile Number*</label>
-                    <input type="tel" class="form-control" id="mobileNumber" name="mobile" placeholder="+91 99999 99999" required
-                        pattern="[\d\s+()-]{7,}">
+                <div class="col-md-3 col-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item glass-panel">
+                        <div class="stat-number counter" data-target="5">0</div>
+                        <div class="text-muted text-uppercase fw-bold">Years Experience</div>
+                    </div>
                 </div>
-            
-                <div class="form-group">
-                    <label for="department">Select Department (Optional)</label>
-                    <select class="form-control" id="department" name="department">
-                        <option selected disabled>Choose...</option>
-                        <option>Sales</option>
-                        <option>Support</option>
-                        <option>Development</option>
-                    </select>
+                <div class="col-md-3 col-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-item glass-panel">
+                        <div class="stat-number">24/7</div>
+                        <div class="text-muted text-uppercase fw-bold">Support Availability</div>
+                    </div>
                 </div>
-            
-                <div class="form-group">
-                    <label for="message">Message*</label>
-                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Write your message here..."
-                        required></textarea>
-                </div>
-            
-                <button type="submit" class="btn btn-blue mt-3">Submit</button>
-            
-                <div id="formMessage" class="alert alert-success mt-3" style="display: none;">
-                    Thank you! We’ll be in touch soon.
-                </div>
-            </form>
-
-
-
             </div>
         </div>
     </section>
 
-    <footer style="background-color: #0b0508;" class="text-white mt-5 pt-4 pb-3">
-        <div class="container text-center text-md-left">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h5 class="brand-name">Nexolyn</h5>
-                    <p>Empowering digital transformation with software & automation.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5 class="text-uppercase mb-3">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white">Home</a></li>
-                        <li><a href="about.html" class="text-white">About</a></li>
-                        <li><a href="services.html" class="text-white">Services</a></li>
-                        <li><a href="#contact" class="text-white">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5 class="text-uppercase mb-3">Contact</h5>
-                    <p>Email: <a href="mailto:nexolyntechnologies@gmail.com" class="text-white">nexolyntechnologies@gmail.com</a></p>
-                    <p>Phone: 9961706029</p>
-                    <p>Location: Kollam, Kerala, India</p>
+    <!-- Testimonials Section -->
+    <section class="section-padding bg-black">
+        <div class="container">
+            <h2 class="section-title text-gradient" data-aos="fade-up">What Our Clients Say</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Trusted by businesses across the globe.</p>
+            
+            <div class="row justify-content-center mt-5" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-lg-8">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner glass-panel rounded-4">
+                            <div class="carousel-item active p-5 text-center">
+                                <i class="fas fa-quote-left fs-1 text-secondary mb-4"></i>
+                                <p class="fs-5 testimonial-text">"Nexolyn entirely transformed our digital presence. Their attention to detail and modern tech stack allowed us to scale our platform flawlessly."</p>
+                                <h5 class="text-white mb-0">Sarah Jenkins</h5>
+                                <span class="text-muted small">CEO, TechCorp</span>
+                            </div>
+                            <div class="carousel-item p-5 text-center">
+                                <i class="fas fa-quote-left fs-1 text-secondary mb-4"></i>
+                                <p class="fs-5 testimonial-text">"The billing software they developed for us automated 80% of our manual accounting work. Absolutely phenomenal engineering team."</p>
+                                <h5 class="text-white mb-0">David Chen</h5>
+                                <span class="text-muted small">Director of Finance, GlobalTrade</span>
+                            </div>
+                            <div class="carousel-item p-5 text-center">
+                                <i class="fas fa-quote-left fs-1 text-secondary mb-4"></i>
+                                <p class="fs-5 testimonial-text">"From design to deployment, Nexolyn was professional, communicative, and delivered a premium product ahead of schedule."</p>
+                                <h5 class="text-white mb-0">Elena Rodriguez</h5>
+                                <span class="text-muted small">Founder, StartupX</span>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="text-center py-3 border-top border-secondary">
-            &copy; 2025 Nexolyn. All rights reserved.
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding" id="contact">
+        <div class="container">
+            <h2 class="section-title text-gradient" data-aos="fade-up">Let's Work Together</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Ready to transform your business? Get in touch with us today.</p>
+
+            <div class="row g-5 mt-4">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="glass-panel p-4 h-100">
+                        <h4 class="text-white mb-4">Contact Information</h4>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="feature-icon bg-transparent border border-secondary text-secondary me-3" style="width: 50px; height: 50px;"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h6 class="text-white mb-1">Location</h6>
+                                <p class="text-muted mb-0">Kollam, Kerala, India</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="feature-icon bg-transparent border border-secondary text-secondary me-3" style="width: 50px; height: 50px;"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h6 class="text-white mb-1">Email</h6>
+                                <a href="mailto:nexolyntechnologies@gmail.com" class="text-muted text-decoration-none">nexolyntechnologies@gmail.com</a>
+                            </div>
+                        </div>
+
+
+                        <!-- Google Maps Iframe -->
+                        <div class="ratio ratio-16x9 rounded overflow-hidden mt-4">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126154.51601614945!2d76.54146039148003!3d8.89209568266209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05fc5839955773%3A0x6e2a27ea7d34bc5b!2sKollam%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="glass-panel p-5">
+                        <h4 class="text-white mb-4">Send us a message</h4>
+                        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                            <input type="hidden" name="access_key" value="f8246aee-3225-4596-83f9-b6075950a37e">
+                            
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-muted small">Full Name*</label>
+                                    <input type="text" class="form-control" name="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-muted small">Email Address*</label>
+                                    <input type="email" class="form-control" name="email" placeholder="john@example.com" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label text-muted small">Subject</label>
+                                    <select class="form-select" name="department">
+                                        <option selected disabled>Choose...</option>
+                                        <option value="Web Development">Web Development</option>
+                                        <option value="Billing Software">Billing Software</option>
+                                        <option value="AI Integration">AI Integration</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label text-muted small">Message*</label>
+                                    <textarea class="form-control" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary w-100">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
+                                </div>
+                            </div>
+                            <div id="formMessage" class="alert alert-success mt-3" style="display: none; background: rgba(37, 211, 102, 0.2); border: 1px solid #25d366; color: white;">
+                                Thank you! We’ll be in touch soon.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand d-flex align-items-center mb-3" href="#">
+                        <img src="logo.png" alt="Nexolyn Logo" style="height: 40px; margin-right: 10px;">
+                        <span class="brand-name text-white fs-4">Nexolyn</span>
+                    </a>
+                    <p class="text-muted pe-4">Empowering digital transformation with state-of-the-art software engineering, AI integration, and cloud architectures.</p>
+                    <div class="mt-4">
+                        <a href="https://github.com/nexolyntechnologies" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.youtube.com/@nexolyn3575" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-4">Local Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="web-development-kollam.html" class="footer-link">Web Development Kollam</a></li>
+                        <li class="mb-2"><a href="billing-software-kollam.html" class="footer-link">Billing Software Kollam</a></li>
+                        <li class="mb-2"><a href="erp-software-kollam.html" class="footer-link">ERP Software Kollam</a></li>
+                        <li class="mb-2"><a href="software-company-kollam.html" class="footer-link">Software Company Kollam</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-4">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="footer-link">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#portfolio" class="footer-link">Portfolio</a></li>
+                        <li class="mb-2"><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="web-development.html" class="footer-link">Web Development</a></li>
+                        <li class="mb-2"><a href="billing-software.html" class="footer-link">Billing Software</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Mobile Apps</a></li>
+                        <li class="mb-2"><a href="machine-learning.html" class="footer-link">AI & Machine Learning</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <p class="text-muted">Subscribe to get the latest tech insights and news.</p>
+                    <div class="input-group mt-3">
+                        <input type="email" class="form-control" placeholder="Your email address" aria-label="Email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center py-4 border-top" style="border-color: var(--glass-border) !important;">
+                <p class="text-muted mb-0">&copy; 2025 Nexolyn Technologies. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
 
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
+        // Initialize AOS animations
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-in-out-cubic',
         });
-    </script>
-  <script>
-  document.getElementById('contactForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
 
-    const response = await fetch(form.action, {
-      method: 'POST',
-      body: data
-    });
-
-    if (response.ok) {
-      form.reset();
-      document.getElementById('formMessage').style.display = 'block';
-    } else {
-      alert('There was a problem submitting your form. Please try again later.');
-    }
-  });
-</script>
-<script>
-    document.getElementById('navbarSearchForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        const searchQuery = document.getElementById('navbarSearchInput').value.toLowerCase().trim();
-        const features = document.querySelectorAll('.contact');
-
-        let matches = 0;
-        features.forEach(item => {
-            const title = item.getAttribute('data-title');
-            if (title.includes(searchQuery)) {
-                item.style.display = 'block';
-                matches++;
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
             } else {
-                item.style.display = 'none';
+                navbar.classList.remove('scrolled');
             }
         });
 
-        if (searchQuery === '') {
-            features.forEach(item => item.style.display = 'block');
-        } else if (matches === 0) {
-            alert(`No features found for "${searchQuery}"`);
+        // Counter Animation for Statistics
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 15);
+                    } else {
+                        counter.innerText = target + (target === 150 || target === 85 ? '+' : '');
+                    }
+                };
+                
+                // Only animate if in viewport
+                const rect = counter.getBoundingClientRect();
+                if(rect.top < window.innerHeight && counter.innerText === '0') {
+                    updateCount();
+                }
+            });
         }
-    });
-</script>
+        
+        window.addEventListener('scroll', animateCounters);
 
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = new FormData(form);
+            const btn = form.querySelector('button[type="submit"]');
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: data
+                });
 
+                if (response.ok) {
+                    form.reset();
+                    document.getElementById('formMessage').style.display = 'block';
+                    setTimeout(() => {
+                        document.getElementById('formMessage').style.display = 'none';
+                    }, 5000);
+                } else {
+                    alert('There was a problem submitting your form. Please try again later.');
+                }
+            } catch (error) {
+                alert('Network error occurred. Please try again.');
+            } finally {
+                btn.innerHTML = 'Send Message <i class="fas fa-paper-plane ms-2"></i>';
+            }
+        });
+    </script>
 </body>
-
 </html>
