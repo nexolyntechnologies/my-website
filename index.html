@@ -32,10 +32,12 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
+          "@type": "SoftwareOrganization",
+          "@id": "https://www.nexolyn.work/#organization",
           "name": "Nexolyn Technologies",
           "url": "https://www.nexolyn.work",
           "logo": "https://www.nexolyn.work/logo.png",
+          "description": "Nexolyn Technologies is a premier software company and IT agency based in Kollam, Kerala. We specialize in custom web development, mobile applications, GST billing software, AI solutions, and ERP systems for businesses.",
           "sameAs": [
             "https://github.com/nexolyntechnologies",
             "https://www.youtube.com/@NexolynTechnologies"
@@ -43,7 +45,8 @@
         },
         {
           "@type": "LocalBusiness",
-          "name": "Nexolyn Technologies",
+          "@id": "https://www.nexolyn.work/#localbusiness",
+          "name": "Nexolyn Technologies Software Development",
           "image": "https://www.nexolyn.work/logo.png",
           "url": "https://www.nexolyn.work",
           "email": "nexolyntechnologies@gmail.com",
@@ -53,9 +56,45 @@
             "addressRegion": "Kerala",
             "addressCountry": "IN"
           },
-          "description": "Leading Software Company in Kollam providing robust IT and software development services.",
-          "areaServed": "Kollam, Kerala, India",
-          "priceRange": "$$"
+          "description": "Leading Software Company in Kollam providing robust IT and software development services, ERP solutions, and web design.",
+          "areaServed": [
+            "Kollam",
+            "Kerala",
+            "India"
+          ],
+          "priceRange": "$$",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Software and Web Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Web Development",
+                  "description": "Custom website design and responsive web application development."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "SoftwareApplication",
+                  "name": "GST Billing Software",
+                  "applicationCategory": "BusinessApplication",
+                  "description": "Easy-to-use billing software tailored for Kerala businesses with GST compliance."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "SoftwareApplication",
+                  "name": "Custom ERP Solutions",
+                  "applicationCategory": "EnterpriseApplication",
+                  "description": "Enterprise Resource Planning software custom built for businesses."
+                }
+              }
+            ]
+          }
         }
       ]
     }
